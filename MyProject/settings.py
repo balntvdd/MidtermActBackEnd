@@ -59,6 +59,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'MyProject.urls'
+CSRF_TRUSTED_ORIGINS = ['https://midtermactbackend.onrender.com']
 
 TEMPLATES = [
     {
