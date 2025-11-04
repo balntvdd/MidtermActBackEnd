@@ -23,9 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d+%0tqj_m1h@6$f34(u8%!3jz+yb&z1kup-jsuhpgcb0=o#(=8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False # <--- CORRECTED: Set to False for secure production deployment
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/','127.0.0.1:8000','127.0.0.1','http://192.168.30.225']
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    '192.168.30.225',
+    'midtermactbackend.onrender.com' # <--- CORRECTED: Added the Render domain
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -124,3 +129,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
